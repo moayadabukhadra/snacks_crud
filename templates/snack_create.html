@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+
+{% block hero %}
+<div class="create" style="background-color:rgb(83, 83, 83); width: 500px;">
+    <h1>Create your snack</h1>
+</div>
+{% endblock %}
+
+{% block main %}
+<form action="." method="POST" style="border:solid 1px ;background-color:rgb(83, 83, 83); width: 500px;">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" class="btn btn-primary" value="Create">
+</form>
+{% endblock %}

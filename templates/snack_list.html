@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Snacks list{% endblock title %}
+
+{% block hero %}
+
+{% for snack in snack_list %}
+<p style="font-size: 24px; font-style:initial; background-color: rgb(143, 143, 143);width: 500px;"><a href="{% url 'snack_detail' pk=snack.pk %}" style="color:rgb(4, 0, 255) ;">{{snack.name}} - {{snack.purchaser}}</a></p>
+{% endfor %}
+
+{% endblock %}
+
