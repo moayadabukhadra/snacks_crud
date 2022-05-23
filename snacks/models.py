@@ -12,6 +12,7 @@ class Snack(models.Model):
     def __str__(self):
         return self.name
 
-    def get_absolute_url(self,pk):
-        return reverse('snack_detail', kwargs={"pk":pk})
+    def get_absolute_url(self):
+        return reverse('snack_detail', kwargs={"pk":self.pk})
+    
 
