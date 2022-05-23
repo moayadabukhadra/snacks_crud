@@ -6,6 +6,11 @@
 
 {% for snack in snack_list %}
 <p style="font-size: 24px; font-style:initial; background-color: rgb(143, 143, 143);width: 500px;"><a href="{% url 'snack_detail' pk=snack.pk %}" style="color:rgb(4, 0, 255) ;">{{snack.name}} - {{snack.purchaser}}</a></p>
+<p>
+    <li><a href=delete{{snack.get_absolute_url}}>delete snack</a></li>
+    <li><a href=update{{snack.get_absolute_url}}>update snack</a></li>
+
+</p>
 {% endfor %}
 
 {% endblock %}
